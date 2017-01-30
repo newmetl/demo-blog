@@ -1,0 +1,9 @@
+<h3>Comments</h3>
+
+<% article.comments.each do |comment| %>
+  <div class="comment">
+    <strong><%= comment.commenter %> said:</strong><br>
+    <%= comment.body %><br>
+    <%= link_to 'Löschen', article_comment_path(article, comment), method: :delete %>
+  </div>
+<% end %>

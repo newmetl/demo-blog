@@ -1,0 +1,5 @@
+<div class="navigation">
+  <%= link_to 'Home', root_path, class: is_navigation_active?(:home) ? 'nav-item is-active' : 'nav-item ' %>
+  <%= link_to 'Articles', articles_path, class: is_navigation_active?(:articles) ? 'nav-item is-active' : 'nav-item' %>
+  <%= link_to 'Comments', comments_path, class: is_navigation_active?(:comments) ? 'nav-item is-active' : 'nav-item' %>
+</div>

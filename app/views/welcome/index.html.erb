@@ -1,0 +1,13 @@
+<h1>Welcome to MyBlog</h1>
+<% @articles.each do |article| %>
+  <div class="article">
+    <h2><%= article.title %></h2>
+    <div><%= article.body.truncate(25) %></div>
+    <% if article.comments.count > 0 %>
+      <div><%= "(#{article.comments.count}) Kommentare" %></div>
+    <% end %>
+    <%= link_to article_path(article) do %>
+      Weiterlesen
+    <% end %>
+  </div>
+<% end %>
